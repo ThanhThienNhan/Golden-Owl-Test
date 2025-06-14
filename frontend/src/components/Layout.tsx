@@ -21,7 +21,7 @@ const Layout = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
               <NavLink to="/" className="text-xl font-bold text-white">
-                Student Scores
+                G-Scores
               </NavLink>
             </div>
 
