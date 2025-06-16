@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import StatisticsChart from '../components/StatisticsChart';
-import type { ScoreStatistics } from '../types/types';
+import { SUBJECTS, type ScoreStatistics } from '../types/types';
 import { getAllStatistics } from '../api/student-score/student-score';
 import Loading from '../components/Loading';
 
@@ -40,7 +40,9 @@ const Statistics = () => {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Object.entries(statistics).map(([subject, stats]) => (
               <div key={subject} className="p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-medium capitalize mb-2">{subject.replace('_', ' ')}</h3>
+                <h3 className="text-lg font-medium capitalize mb-2">
+                  {SUBJECTS.find((s) => s.key === subject)?.label || subject}
+                </h3>                
                 <ul className="space-y-1">
                   {Object.entries(stats).map(([range, count]) => (
                     <li key={range} className="flex justify-between">
