@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { StudentScoreModule } from './student-score/student-score.module';
+import { RedisModule } from './redis.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { StudentScoreModule } from './student-score/student-score.module';
       synchronize: true,
     }),
     StudentScoreModule,
+    RedisModule
   ],
 })
 export class AppModule {}
