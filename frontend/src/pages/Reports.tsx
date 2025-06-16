@@ -53,9 +53,9 @@ const Reports = () => {
           value={subject}
           onChange={handleChange}
         >
-          <option value="">-- Choose a subject --</option>
+          <option value="" className='text-black'>-- Choose a subject --</option>
           {SUBJECTS.map(sub => (
-            <option key={sub.key} value={sub.key}>
+            <option className='text-black' key={sub.key} value={sub.key}>
               {sub.label}
             </option>
           ))}
@@ -71,7 +71,7 @@ const Reports = () => {
       )}
 
       {!isLoading && !error && report && (
-        <div className="max-w-md mx-auto">
+        <div className="text-black max-w-md mx-auto">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-4">Score Distribution of {SUBJECTS.find(sub => sub.key === subject)?.label || ''}</h2>
             <ul className="space-y-3">

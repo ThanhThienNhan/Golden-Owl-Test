@@ -39,7 +39,7 @@ const Statistics = () => {
           <StatisticsChart data={statistics} />
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Object.entries(statistics).map(([subject, stats]) => (
-              <div key={subject} className="p-4 bg-white rounded-lg shadow-md">
+              <div key={subject} className="p-4 text-black bg-white rounded-lg shadow-md">
                 <h3 className="text-lg font-medium capitalize mb-2">
                   {SUBJECTS.find((s) => s.key === subject)?.label || subject}
                 </h3>                

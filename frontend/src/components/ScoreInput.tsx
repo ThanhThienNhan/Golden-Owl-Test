@@ -43,7 +43,7 @@ const ScoreInput = ({ onSearch, scoreData, isLoading, error }: ScoreInputProps) 
             value={sbd}
             onChange={(e) => setSbd(e.target.value)}
             onBlur={() => setTouched(true)}
-            className={`mt-1 block w-full px-3 py-2 border ${
+            className={`text-black mt-1 block w-full px-3 py-2 border ${
               touched && !isValidSbd ? 'border-red-500' : 'border-gray-300'
             } rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500`}
             placeholder="Enter Registration Number (e.g., 01000001)"
